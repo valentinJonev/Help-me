@@ -38,7 +38,7 @@ module MobileWrapper.Config{
       var loginState = {
         name: 'login',
         url: '/login',
-        templateUrl: 'views/login.html',
+        templateUrl: 'views/login?',
         controller: 'loginController'
       };
 

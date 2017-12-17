@@ -6,13 +6,9 @@ module MobileWrapper {
     wrapper.controller('indexController', MobileWrapper.Controllers.IndexController);
     wrapper.controller('loginController', MobileWrapper.Controllers.LoginController);
     wrapper.controller('homeController', MobileWrapper.Controllers.HomeController);
-    wrapper.controller('widgetController', MobileWrapper.Controllers.WidgetController);
-    wrapper.controller('mainController', MobileWrapper.Controllers.MainController);
     wrapper.controller('errorController', MobileWrapper.Controllers.ErrorController);
     wrapper.controller('infoController', MobileWrapper.Controllers.InfoController);
     wrapper.controller('settingsController', MobileWrapper.Controllers.SettingsController);
-    wrapper.controller('pageController', MobileWrapper.Controllers.PageController);
-    wrapper.controller('loadingController', MobileWrapper.Controllers.LoadingController);
 
     wrapper.directive('dynamic', MobileWrapper.Directives.DynamicHtml.Factory())
 
@@ -23,8 +19,6 @@ module MobileWrapper {
     wrapper.service('authService', MobileWrapper.Services.AuthService);
     wrapper.service('modalService', MobileWrapper.Services.ModalService);
     wrapper.service('updateService', MobileWrapper.Services.UpdateService);
-    wrapper.service('widgetService', MobileWrapper.Services.WidgetService);
-    wrapper.service('menuService', MobileWrapper.Services.MenuService);
 
     wrapper.config(MobileWrapper.Config.RouteConfig);
 

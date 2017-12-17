@@ -15,7 +15,8 @@ self.addEventListener('install', function(event) {
         'views/artists.html',
         'views/music.html',
         'views/home.html',
-        'views/settings.html'
+        'views/settings.html',
+        'views/login.html'
       ]);
     })
   );

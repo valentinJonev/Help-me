@@ -11,13 +11,9 @@
 /// <reference path='controllers/indexController.ts' />
 /// <reference path='controllers/loginController.ts' />
 /// <reference path='controllers/homeController.ts' />
-/// <reference path='controllers/widgetController.ts' />
-/// <reference path='controllers/mainController.ts' />
 /// <reference path='controllers/errorController.ts' />
 /// <reference path='controllers/infoController.ts' />
 /// <reference path='controllers/settingsController.ts' />
-/// <reference path='controllers/pageController.ts' />
-/// <reference path='controllers/loadingController.ts' />
 
 /// <reference path="directives/dynamic.ts" />
 
@@ -28,8 +24,6 @@
 /// <reference path='services/authService.ts' />
 /// <reference path='services/modalService.ts' />
 /// <reference path='services/updateService.ts' />
-/// <reference path='services/widgetService.ts' />
-/// <reference path='services/menuService.ts' />
 
 /// <reference path="config/routeConfig.ts" />
 /// <reference path="config/appConstants.ts" />

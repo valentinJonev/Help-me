@@ -31,10 +31,11 @@ module MobileWrapper.Config{
 
             this.authService.IsLoggedIn()
             .then(() => {
-                this.commonService.ReloadMenu();
+                //this.commonService.ReloadMenu();
                 this.commonService.NavigateToPage('home', this.state, this.rootScope);
+                this.commonService.ReloadMenu();
             }, () => {
-                this.commonService.NavigateToPage('loading', this.state, this.rootScope);
+                this.commonService.NavigateToPage('register', this.state, this.rootScope);
             })
 
             this.setHandlers();
@@ -85,7 +86,8 @@ module MobileWrapper.Config{
         }
 
         pingServer = () => {
-            fetch(this.apiConstants.GetLoginService(), { headers: {
+            var imei = window.localStorage.getItem('imei');
+            fetch(this.apiConstants.GetAuthService() + "?imei=" + imei, { headers: {
                     Accept: '*/*'
                 }})
             .then(() => {

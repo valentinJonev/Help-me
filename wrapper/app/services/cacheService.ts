@@ -58,6 +58,8 @@ module MobileWrapper.Services {
             })
 
             persistence.schemaSync();
+
+            window.localStorage.setItem('imei', device.uuid);
         }
 
         public Add(model: any){

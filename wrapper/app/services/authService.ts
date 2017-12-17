@@ -58,8 +58,9 @@ module MobileWrapper.Services{
 
         public IsLoggedIn(){
             var deferred = this.q.defer();
+            var imei = window.localStorage.getItem('imei');
 
-            this.cacheService.GetCache(this.cacheConstants.LOGGED_IN)
+            this.httpService.Get(this.apiConstants.GetAuthService(), {"imei":imei})
             .then((success) => {
                 if(success == this.commonConstants.TRUE){
                     deferred.resolve(true);
@@ -77,7 +78,7 @@ module MobileWrapper.Services{
         public Logout() {
             var deferred = this.q.defer();
 
-            this.httpService.Post(this.apiConstants.GetLogoutService(), {})
+            this.httpService.Get(this.apiConstants.GetAuthService(), {})
             .then(() => {
                 this.cacheService.SetValue(this.cacheConstants.LOGGED_IN, this.commonConstants.FALSE);
                 this.cacheService.SetValue(this.cacheConstants.OAUTH_TOKEN, '');
