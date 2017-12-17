@@ -17,29 +17,36 @@ module MobileWrapper.Config{
       var homeState = {
         name: 'home',
         url: '/',
-        templateUrl: 'views/home.html',
+        templateUrl: 'views/main.html',
         controller: 'homeController'
       };
 
-      var musicState = {
-        name: 'music',
-        url: '/music',
-        templateUrl: 'views/music.html',
-        controller: 'homeController'
+      var registerState = {
+        name: 'register',
+        url: '/register',
+        templateUrl: 'views/register.html',
+        controller: 'registerController'
       };
 
-      var artistsState = {
-        name: 'artists',
-        url: '/artists',
-        templateUrl: 'views/artists.html',
-        controller: 'homeController'
+      var profileState = {
+        name: 'profile',
+        url: '/profile',
+        templateUrl: 'views/profile.html',
+        controller: 'profileController'
       };
 
-      var loginState = {
-        name: 'login',
-        url: '/login',
-        templateUrl: 'views/login?',
-        controller: 'loginController'
+      var signalState = {
+        name: 'signal',
+        url: '/signal',
+        templateUrl: 'views/signal.html',
+        controller: 'signalController'
+      };
+
+      var infoState = {
+        name: 'info',
+        url: '/info',
+        templateUrl: 'views/info.html',
+        controller: 'informationController'
       };
 
       var settingsState = {
@@ -51,9 +58,10 @@ module MobileWrapper.Config{
       };
 
       this.stateProvider.state(homeState);
-      this.stateProvider.state(musicState);
-      this.stateProvider.state(artistsState);
-      this.stateProvider.state(loginState);
+      this.stateProvider.state(registerState);
+      this.stateProvider.state(profileState);
+      this.stateProvider.state(signalState);
+      this.stateProvider.state(infoState);
       this.stateProvider.state(settingsState);
     }
   }

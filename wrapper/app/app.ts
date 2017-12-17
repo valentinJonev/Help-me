@@ -4,7 +4,6 @@ module MobileWrapper {
     var wrapper: ng.IModule = angular.module('mobile-wrapper', ['ui.router', 'ngCordova', 'angular-loading-bar', 'ngAnimate', 'ui.bootstrap', 'onsen', 'ui-notification']);
 
     wrapper.controller('indexController', MobileWrapper.Controllers.IndexController);
-    wrapper.controller('loginController', MobileWrapper.Controllers.LoginController);
     wrapper.controller('homeController', MobileWrapper.Controllers.HomeController);
     wrapper.controller('errorController', MobileWrapper.Controllers.ErrorController);
     wrapper.controller('infoController', MobileWrapper.Controllers.InfoController);
@@ -29,7 +28,7 @@ module MobileWrapper {
 
     let httpConfig = ($httpProvider: ng.IHttpProvider) => {
         $httpProvider.interceptors.push(Config.AuthInterceptor.Factory);
-    }; 
+    };
 
     let appConfig = ($qProvider: ng.IQProvider) => {
         $qProvider.errorOnUnhandledRejections(false);

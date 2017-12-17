@@ -9,7 +9,6 @@
 /// <reference path='app.ts' />
 
 /// <reference path='controllers/indexController.ts' />
-/// <reference path='controllers/loginController.ts' />
 /// <reference path='controllers/homeController.ts' />
 /// <reference path='controllers/errorController.ts' />
 /// <reference path='controllers/infoController.ts' />

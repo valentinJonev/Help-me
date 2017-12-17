@@ -6,7 +6,7 @@ module MobileWrapper.Constants {
         }
 
         private configure(){
-            this.API_URL = 'http://192.168.5.126:3000/api';
+            this.API_URL = 'http://192.168.43.151:3000/api';
         }
 
         public API_URL;
