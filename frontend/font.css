@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "Segoe Print";
+    src: url(./911Fonts.com_SegoePrint__-_911fonts.com_fonts_oki4.ttf) format("truetype");
+}
+p { 
+    font-family: "Segoe Print", Verdana, Tahoma;
+}
