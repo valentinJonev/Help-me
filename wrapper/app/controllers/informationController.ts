@@ -1,5 +1,5 @@
 module MobileWrapper.Controllers {
-    interface InformationScope extends ng.IScope
+    interface InformationScope extends ng.IScope{
     }
 
     export class InformationController {

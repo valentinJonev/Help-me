@@ -44,23 +44,23 @@
   margin: 0;
   margin-top: 5px;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
-  color: black;
+  color: white;
 }
 
 .signall-wrapper #current_department {
   display: inline-block;
   position: relative;
-  height: 100%;
   width: 100%;
   background: url("../misc/images/0c6d1865275bc007f1893a9044e34b3e.png");
   background-size: 100%;
+  margin-top: 15%;
 }
 
 .signall-wrapper .signal-tier {
   margin-left: 10%;
   margin-top: 2%;
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   margin-bottom: 2%;
   font-size: 36px;
   text-align: center;
@@ -83,7 +83,7 @@
 }
 
 .signall-wrapper .add-info img {
-  width: 180px;
+  width: 200px;
 }
 
 .signall-wrapper .green {
@@ -102,6 +102,7 @@
   text-align: center;
   width: 100%;
   background-color: rgba(0,0,0,0.5);
+  color: white;
 }
 
 .signall-wrapper .button {

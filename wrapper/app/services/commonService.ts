@@ -55,7 +55,7 @@ module MobileWrapper.Services{
                     deferred.reject();
                 });
             },(error) => {
-                $state.go('login')
+                $state.go('register')
                 .then(function(success){
                     scope.mySplitter.left.close();
                     deferred.resolve();
@@ -101,9 +101,9 @@ module MobileWrapper.Services{
         public Logout(state: ng.ui.IStateService, scope: any) {
             this.authService.Logout()
             .then(() => {
-                this.NavigateToPage('login', state, scope);
+                this.NavigateToPage('register', state, scope);
             }, () => {
-                this.NavigateToPage('login', state, scope);
+                this.NavigateToPage('register', state, scope);
             })
         }
 
