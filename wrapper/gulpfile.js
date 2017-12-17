@@ -133,7 +133,7 @@ pipes.builtIndexProd = function() {
     var vendorScripts = pipes.builtVendorScriptsDev()
         .pipe(pipes.orderedVendorScripts());
     var appScripts = pipes.compileTypescript();
-    var appStyles = pipes.builtStylesProd();
+    var appStyles = pipes.builtStylesDev();
     var appViews = pipes.builtViews();
     var misc = pipes.builtMiscFolder();
     var serviceWorker = pipes.builtServiceWorker();

@@ -4,6 +4,7 @@ module MobileWrapper.Controllers {
         menu: string | null;
         mySplitter: any;
         appName: string;
+        showToolbar: boolean;
     }
 
     export class IndexController
@@ -15,8 +16,8 @@ module MobileWrapper.Controllers {
         private commonConstants: Constants.CommonConstants;
 
         static $inject = ['$scope', 'commonService', '$state', 'templateConstants', 'commonConstants'];
-        
-        constructor($scope: IndexScope, commonService: Services.CommonService, $state: ng.ui.IStateService, 
+
+        constructor($scope: IndexScope, commonService: Services.CommonService, $state: ng.ui.IStateService,
                     templateConstants: Constants.TemplateConstants, commonConstants: Constants.CommonConstants) {
             this.scope = $scope;
             this.commonService = commonService;
@@ -25,6 +26,11 @@ module MobileWrapper.Controllers {
             this.state = $state;
             this.commonService.SetMenuVisibility(false);
             this.scope.appName = this.commonConstants.APP_NAME;
+            this.scope.showToolbar = false;
+        }
+
+        public ToggleToolbar(){
+          this.scope.showToolbar = !this.scope.showToolbar;
         }
 
         public SetPage(page: string, params: any = '') {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src * 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -21,7 +21,7 @@
             </ons-splitter-side>
             <ons-splitter-content>
                 <ons-page>
-                    <ons-toolbar>
+                    <ons-toolbar ng-show="index.scope.showToolbar">
                         <div class="left">
                             <ons-toolbar-button class="menuButton" ng-click="mySplitter.left.open()">
                                 <ons-icon icon="md-menu"></ons-icon>
