@@ -1,0 +1,62 @@
+.wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.signal-wrapper {
+  position: relative;
+  display: inline-table;
+  width: 50%;
+  padding-top: 10%;
+  padding-bottom: 5%;
+  float: left;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+img {
+  position: relative;
+  display: block;
+  max-width: 50%;
+  margin: auto;
+}
+
+#police {
+  background-color: rgba(70, 127, 215, 0.5);
+}
+
+#ambulance {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#zoopolice {
+  background-color: rgba(124, 209, 117, 0.5);
+}
+
+#firedepartment {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+#panicbutton {
+  position: relative;
+  display: block;
+  margin-top: 95%;
+  width: 100%;
+  text-align: center;
+}
+
+#panicbutton img {
+  margin-top: 10%;
+}
+
+p {
+  margin: 0;
+  margin-top: 5px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#panicbutton p {
+  margin-top: 5px;
+  font-size: 24px;
+}
