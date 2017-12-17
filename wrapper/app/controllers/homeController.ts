@@ -26,9 +26,9 @@ module MobileWrapper.Controllers {
             IMEI: "28bdd989ba275457"
           }
 
-          $.ajax({type: "POST", data: signal, url: "192.168.43.151:3000/api/Signal/SendSignal?imei=28bdd989ba275457"})
+          $.ajax({type: "POST", data: signal, url: "http://192.168.43.151:3000/api/Signal/SendSignal?imei=28bdd989ba275457"})
           .then(() => {
-            this.commonService.NavigateToPage('home', this.state, this.scope);
+            this.commonService.NavigateToPage('signal', this.state, this.scope);
           })
         }
     }
