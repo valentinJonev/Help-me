@@ -1,0 +1,118 @@
+.wrapper {
+  display: inline-block;
+  position: relative;
+  background: url("./assets/4b3b64dc4ba288aaad2e0775ff1d8901.jpg");
+  color: white;
+}
+
+.signal-wrapper {
+  position: relative;
+  display: inline-table;
+  width: 33%;
+  float: left;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+img {
+  position: relative;
+  display: block;
+  max-width: 50%;
+  margin: auto;
+}
+
+#police {
+  background-color: rgba(70, 127, 215, 0.5);
+}
+
+#ambulance {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#zoopolice {
+  background-color: rgba(124, 209, 117, 0.5);
+}
+
+#firedepartment {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+p {
+  margin: 0;
+  margin-top: 5px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  color: black;
+}
+
+#current_department {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: url("./assets/0c6d1865275bc007f1893a9044e34b3e.png");
+  background-size: 100%;
+}
+
+.signal-tier {
+  margin-left: 10%;
+  margin-top: 2%;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 2%;
+  font-size: 36px;
+  text-align: center;
+  position: relative;
+  display: block;
+  float:left;
+}
+
+.signal-tier p {
+  margin-top: 27%;
+  display: inline-block;
+}
+
+.add-info {
+  position: relative;
+  display: block;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  float: right;
+}
+
+.add-info img {
+  width: 180px;
+}
+
+.green {
+  background-color: rgb(0, 255, 0);
+}
+
+.yellow {
+  background-color: rgb(255, 255, 0);
+}
+
+.red {
+  background-color: rgb(255, 0, 0);
+}
+
+.signal-lock {
+  text-align: center;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.button {
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 80%;
+    margin-bottom: 5px;
+}

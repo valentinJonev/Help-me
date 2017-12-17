@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Register</title>
-<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="signal.css">
 <script src="jquery-3.2.1.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,10 +12,6 @@
 </head>
 
     <div class="wrapper">
-          <div id="police" class="signal-wrapper">
-              <img src="./assets/0c6d1865275bc007f1893a9044e34b3e.png">
-              <p>Полиция</p>
-          </div>
           <div id="ambulance" class="signal-wrapper">
               <img src="./assets/c975b0593ecb7ab7c1e72049218fcc40.png">
               <p>Бърза помощ</p>
@@ -28,11 +24,30 @@
               <img src="./assets/5618cfee7b8bff103c81cd90593d0465.png">
               <p>Зоополиция</p>
           </div>
-          <div id="panicbutton" class="">
-              <img style="float: right;" src="./assets/oval.png"></img>
-              <img style="float: left; transform: rotate(180deg);" src="./assets/oval.png"></img>
-              <img src="./assets/56cbcd451ec7238b4d303440617a74c9.png"></img>
-              <p>Паник бутон!</p>
+          <div id="current_department">
+              <div class="signal-tier green">
+                <p>1</p>
+              </div>
+              <div class="add-info">
+                  <img src="./assets/13652249372108434179Record Button Microphone.svg.hi.png">
+              </div>
+              <div class="signal-tier yellow">
+                <p>2</p>
+              </div>
+              <div class="add-info">
+                  <img src="./assets/fab2.png">
+              </div>
+              <div class="signal-tier red">
+                <p>3</p>
+              </div>
+              <div class="add-info">
+                  <img src="./assets/Messages-2-icon (1).png">
+              </div>
+          </div>
+          <div class="signal-lock">
+              <p>Сигнал беше подаден преди:</p>
+              <p>00:12</p>
+              <button type="button" class="button">Отказ</button>
           </div>
     </div>
 
