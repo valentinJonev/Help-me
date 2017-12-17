@@ -34,7 +34,7 @@ module MobileWrapper.Controllers {
           });
           fileInput.addEventListener( "change", function( event ) {
               this.picture = this;
-              readURL(this);
+              this.readURL(this);
           });
         }
 

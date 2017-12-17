@@ -1,11 +1,11 @@
-.wrapper {
+.signall-wrapper {
   display: inline-block;
   position: relative;
   background: url("../misc/images/4b3b64dc4ba288aaad2e0775ff1d8901.jpg");
   color: white;
 }
 
-.signal-wrapper {
+.signall-wrapper .signal-wrapper {
   position: relative;
   display: inline-table;
   width: 33%;
@@ -17,46 +17,46 @@
   text-align: center;
 }
 
-img {
+.signall-wrapper img {
   position: relative;
   display: block;
   max-width: 50%;
   margin: auto;
 }
 
-#police {
+.signall-wrapper #police {
   background-color: rgba(70, 127, 215, 0.5);
 }
 
-#ambulance {
+.signall-wrapper #ambulance {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-#zoopolice {
+.signall-wrapper #zoopolice {
   background-color: rgba(124, 209, 117, 0.5);
 }
 
-#firedepartment {
+.signall-wrapper #firedepartment {
   background-color: rgba(255, 0, 0, 0.5);
 }
 
-p {
+.signall-wrapper p {
   margin: 0;
   margin-top: 5px;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
   color: black;
 }
 
-#current_department {
+.signall-wrapper #current_department {
   display: inline-block;
   position: relative;
   height: 100%;
   width: 100%;
-  background: url("./assets/0c6d1865275bc007f1893a9044e34b3e.png");
+  background: url("../misc/images/0c6d1865275bc007f1893a9044e34b3e.png");
   background-size: 100%;
 }
 
-.signal-tier {
+.signall-wrapper .signal-tier {
   margin-left: 10%;
   margin-top: 2%;
   width: 90px;
@@ -69,12 +69,12 @@ p {
   float:left;
 }
 
-.signal-tier p {
+.signall-wrapper .signal-tier p {
   margin-top: 27%;
   display: inline-block;
 }
 
-.add-info {
+.signall-wrapper .add-info {
   position: relative;
   display: block;
   margin-bottom: 2%;
@@ -82,29 +82,29 @@ p {
   float: right;
 }
 
-.add-info img {
+.signall-wrapper .add-info img {
   width: 180px;
 }
 
-.green {
+.signall-wrapper .green {
   background-color: rgb(0, 255, 0);
 }
 
-.yellow {
+.signall-wrapper .yellow {
   background-color: rgb(255, 255, 0);
 }
 
-.red {
+.signall-wrapper .red {
   background-color: rgb(255, 0, 0);
 }
 
-.signal-lock {
+.signall-wrapper .signal-lock {
   text-align: center;
   width: 100%;
   background-color: rgba(0,0,0,0.5);
 }
 
-.button {
+.signall-wrapper .button {
     background-color: red; /* Green */
     border: none;
     color: white;
