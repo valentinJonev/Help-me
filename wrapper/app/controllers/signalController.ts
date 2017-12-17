@@ -1,18 +1,20 @@
 module MobileWrapper.Controllers {
     interface SignalScope extends ng.IScope{
-      timer: integer
+      timer: any
     }
 
     export class SignalController {
         private scope: SignalScope;
+        private state: any;
         private commonService: Services.CommonService;
         private signal: any;
 
 
-        static $inject = ['$scope', 'commonService', 'signall'];
+        static $inject = ['$scope', 'commonService', '$state', 'signall'];
 
-        constructor($scope: SignalScope, commonService: Services.CommonService, signall: any) {
+        constructor($scope: SignalScope, commonService: Services.CommonService, $state: any, signall: any) {
             this.scope = $scope;
+            this.state = $state;
             this.commonService = commonService;
             this.commonService.SetMenuVisibility(true);
             this.signal = signall;
@@ -37,7 +39,7 @@ module MobileWrapper.Controllers {
           })
         }
 
-        public SetSignalLevel(threatLevel: int){
+        public SetSignalLevel(threatLevel: any){
           this.signal.ThreatLevel = threatLevel;
 
           $.ajax({type: "POST", data: this.signal, url: "http://192.168.43.151:3000/api/Signal/SendSignal?imei=28bdd989ba275457"})
