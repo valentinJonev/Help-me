@@ -13,6 +13,10 @@
 /// <reference path='controllers/errorController.ts' />
 /// <reference path='controllers/infoController.ts' />
 /// <reference path='controllers/settingsController.ts' />
+/// <reference path='controllers/registerController.ts' />
+/// <reference path='controllers/informationController.ts' />
+/// <reference path='controllers/profileController.ts' />
+/// <reference path='controllers/signalController.ts' />
 
 /// <reference path="directives/dynamic.ts" />
 

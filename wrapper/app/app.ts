@@ -8,6 +8,10 @@ module MobileWrapper {
     wrapper.controller('errorController', MobileWrapper.Controllers.ErrorController);
     wrapper.controller('infoController', MobileWrapper.Controllers.InfoController);
     wrapper.controller('settingsController', MobileWrapper.Controllers.SettingsController);
+    wrapper.controller('registerController', MobileWrapper.Controllers.RegisterController);
+    wrapper.controller('informationController', MobileWrapper.Controllers.InformationController);
+    wrapper.controller('profileController', MobileWrapper.Controllers.ProfileController);
+    wrapper.controller('signalController', MobileWrapper.Controllers.SignalController);
 
     wrapper.directive('dynamic', MobileWrapper.Directives.DynamicHtml.Factory())
 
