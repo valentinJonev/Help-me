@@ -57,6 +57,7 @@ module MobileWrapper.Config{
         controllerAs: 'settings'
       };
 
+      this.urlRouterProvider.otherwise('/')
       this.stateProvider.state(homeState);
       this.stateProvider.state(registerState);
       this.stateProvider.state(profileState);
