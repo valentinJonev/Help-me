@@ -14,11 +14,11 @@ module MobileWrapper.Services{
         private templateConstants: Constants.TemplateConstants;
         private menuLoaded: boolean;
 
-        static $inject = ['templatingService', 'cacheService', '$q', 'authService', 'modalService', 'httpService', 'apiConstants', 
+        static $inject = ['templatingService', 'cacheService', '$q', 'authService', 'modalService', 'httpService', 'apiConstants',
                         'templateConstants', '$rootScope'];
 
-        constructor(templatingService: Services.TemplatingService, cacheSevice: Services.CacheService, $q: ng.IQService, authService: Services.AuthService, 
-                    modalService: Services.ModalService, httpService: Services.HttpService, apiConstants: Constants.ApiConstants, 
+        constructor(templatingService: Services.TemplatingService, cacheSevice: Services.CacheService, $q: ng.IQService, authService: Services.AuthService,
+                    modalService: Services.ModalService, httpService: Services.HttpService, apiConstants: Constants.ApiConstants,
                     templateConstants: Constants.TemplateConstants, $rootScope: Config.IRootScope) {
             this.templateService = templatingService;
             this.cacheService = cacheSevice;
@@ -80,7 +80,7 @@ module MobileWrapper.Services{
                 this.modalService.Error('Error loading the resource', error, {});
                 deferred.reject('');
             })
-            
+
             return deferred.promise;
         }
 
@@ -135,7 +135,7 @@ module MobileWrapper.Services{
                                                 </ons-list>
                                             </div>`;
                 })
-            
+
         }
     }
 }

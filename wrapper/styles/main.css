@@ -1,9 +1,9 @@
-.wrapper {
+.main-wrapper {
   display: inline-block;
   position: relative;
 }
 
-.signal-wrapper {
+.main-signal-wrapper {
   position: relative;
   display: inline-table;
   width: 50%;
@@ -15,30 +15,30 @@
   text-align: center;
 }
 
-img {
+img.main {
   position: relative;
   display: block;
   max-width: 50%;
   margin: auto;
 }
 
-#police {
+#main-police {
   background-color: rgba(70, 127, 215, 0.5);
 }
 
-#ambulance {
+#main-ambulance {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-#zoopolice {
+#main-zoopolice {
   background-color: rgba(124, 209, 117, 0.5);
 }
 
-#firedepartment {
+#main-firedepartment {
   background-color: rgba(255, 0, 0, 0.5);
 }
 
-#panicbutton {
+#main-panicbutton {
   position: relative;
   display: block;
   margin-top: 95%;
@@ -46,17 +46,17 @@ img {
   text-align: center;
 }
 
-#panicbutton img {
+#main-panicbutton img {
   margin-top: 10%;
 }
 
-p {
+p.main {
   margin: 0;
   margin-top: 5px;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-#panicbutton p {
+#main-panicbutton p {
   margin-top: 5px;
   font-size: 24px;
 }
