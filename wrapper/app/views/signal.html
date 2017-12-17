@@ -1,31 +1,31 @@
 
-    <div class="signall-wrapper">
-          <div id="ambulance" class="signal-wrapper">
+    <div class="signall-wrapper"  ng-controller="signalController as signal">
+          <div id="ambulance" ng-click="signal.SendSignal('Ambulance')" class="signal-wrapper">
               <img src="./misc/images/c975b0593ecb7ab7c1e72049218fcc40.png">
               <p>Бърза помощ</p>
           </div>
-          <div id="firedepartment" class="signal-wrapper">
+          <div id="firedepartment" ng-click="signal.SendSignal('FireDepartment')" class="signal-wrapper">
               <img src="./misc/images/ad625b88fffbfb462c015302eff9ab74.png">
               <p>Пожарна</p>
           </div>
-          <div id="zoopolice" class="signal-wrapper">
+          <div id="zoopolice"  ng-click="signal.SendSignal('AnimalControl')"  class="signal-wrapper">
               <img src="./misc/images/5618cfee7b8bff103c81cd90593d0465.png">
               <p>Зоополиция</p>
           </div>
           <div id="current_department">
-              <div class="signal-tier green">
+              <div class="signal-tier green" ng-click="signal.SetSignalLevel(1)">
                 <p>1</p>
               </div>
               <div class="add-info">
                   <img src="./misc/images/13652249372108434179Record Button Microphone.svg.hi.png">
               </div>
-              <div class="signal-tier yellow">
+              <div class="signal-tier yellow" ng-click="signal.SetSignalLevel(2)">
                 <p>2</p>
               </div>
               <div class="add-info">
                   <img src="./misc/images/fab2.png">
               </div>
-              <div class="signal-tier red">
+              <div class="signal-tier red" ng-click="signal.SetSignalLevel(3)">
                 <p>3</p>
               </div>
               <div class="add-info">
@@ -34,7 +34,7 @@
           </div>
           <div class="signal-lock">
               <p>Сигнал беше подаден преди:</p>
-              <p>00:12</p>
+              <p ng-bind="signal.scope.timer"></p>
               <button type="button" class="button">Отказ</button>
           </div>
     </div>

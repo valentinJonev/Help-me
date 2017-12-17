@@ -27,8 +27,8 @@ module MobileWrapper.Controllers {
           }
 
           $.ajax({type: "POST", data: signal, url: "http://192.168.43.151:3000/api/Signal/SendSignal?imei=28bdd989ba275457"})
-          .then(() => {
-            this.commonService.NavigateToPage('signal', this.state, this.scope);
+          .then((signall: any) => {
+            this.commonService.NavigateToPage('signal', this.state, this.scope, signall);
           })
         }
     }
