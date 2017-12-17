@@ -21,7 +21,7 @@ module MobileWrapper.Controllers {
             Service: service,
             ThreatLevel: 3,
             Location: "Sofia",
-            TimeSent: Date.now(),
+            TimeSent: new Date().toLocaleTimeString(),
             Victim: true,
             IMEI: "28bdd989ba275457"
           }

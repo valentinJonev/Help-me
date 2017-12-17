@@ -45,5 +45,14 @@ module MobileWrapper.Controllers {
             this.commonService.NavigateToPage('signal', this.state, this.scope);
           })
         }
+
+        public CancelSignal(){
+          this.signal.ThreatLevel = 0;
+
+          $.ajax({type: "POST", data: this.signal, url: "http://192.168.43.151:3000/api/Signal/SendSignal?imei=28bdd989ba275457"})
+          .then(() => {
+            this.commonService.NavigateToPage('home', this.state, this.scope);
+          })
+        }
     }
 }
