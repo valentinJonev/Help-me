@@ -12,11 +12,12 @@ self.addEventListener('install', function(event) {
         'views/offline.html',
         'views/error.html',
         'views/menu.html',
-        'views/artists.html',
-        'views/music.html',
-        'views/home.html',
+        'views/main.html',
         'views/settings.html',
-        'views/login.html'
+        'views/info.html',
+        'views/profile.html',
+        'views/register.html',
+        'views/signal.html'
       ]);
     })
   );
@@ -106,7 +107,7 @@ async function serveOutsideRequests(event){
           else if(header[0] == 'cache-control' && header[1] == 'no-cache'){
             cacheControll = true;
           }
-        } 
+        }
 
         if(!cacheControll){
           cache.put(event.request.url, networkResponse.clone());

@@ -2,16 +2,16 @@ var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 plugins.cordova = require('cordova-lib').cordova.raw;
 var del = require('del');
-var es = require('event-stream');    
+var es = require('event-stream');
 var bowerFiles = require('main-bower-files');
 var print = require('gulp-print');
-var Q = require('q');   
+var Q = require('q');
 
 var cordovaPlugins = ['cordova-plugin-file-transfer'];
 
 var paths = {
     scripts: './app/**/*.ts',
-    styles: './styles/*.css',
+    styles: './styles/**',
     misc: './misc/**',
     views: './app/**/*.html',
     index: './app/index.html',
@@ -32,11 +32,11 @@ pipes.orderedVendorScripts = function() {
     return plugins.order(['angular.js', 'angular-ui-router.js', 'angular-sanitize.js', 'ng-cordova.js', 'loading-bar.min.js', 'angular-animate.min.js', 'mustache.js', 'ui-bootstrap-tpls.js', 'onsenui.js', 'angular-onsenui.min.js', 'jquery.js']);
 };
 
-pipes.orderedAppScripts = function() {  
+pipes.orderedAppScripts = function() {
     return plugins.angularFilesort();
 };
 
-pipes.minifiedFileName = function() {  
+pipes.minifiedFileName = function() {
     return plugins.rename(function (path) {
         path.extname = '.min' + path.extname;
     });
@@ -49,7 +49,7 @@ gulp.task('ts-lint', function () {
 pipes.compileTypescript = function () {
     var sourceTsFiles = [paths.scripts,                //path to typescript files
                          paths.tsDefinitions]; //reference to library .d.ts files
-                        
+
 
     var tsResult = gulp.src(sourceTsFiles)
                        .pipe(tsProject());
@@ -60,25 +60,25 @@ pipes.compileTypescript = function () {
                         .pipe(gulp.dest(paths.distScripts));
 };
 
-pipes.builtVendorScriptsDev = function() {  
+pipes.builtVendorScriptsDev = function() {
     return gulp.src(bowerFiles())
         .pipe(pipes.orderedVendorScripts())
         .pipe(gulp.dest(paths.distScripts));
 };
 
-pipes.builtVendorScriptsProd = function() {  
+pipes.builtVendorScriptsProd = function() {
     return gulp.src(bowerFiles())
         .pipe(pipes.orderedVendorScripts())
         .pipe(plugins.concat('lib.min.js'))
         .pipe(gulp.dest(paths.distScripts));
 };
 
-pipes.builtStylesDev = function() {  
+pipes.builtStylesDev = function() {
     return gulp.src(paths.styles)
         .pipe(gulp.dest(paths.distStyles));
 };
 
-pipes.builtMiscFolder = function() {  
+pipes.builtMiscFolder = function() {
     return gulp.src(paths.misc)
         .pipe(gulp.dest(paths.distMisc));
 };
@@ -88,7 +88,7 @@ pipes.builtServiceWorker = function(){
         .pipe(gulp.dest(paths.dist));
 };
 
-pipes.builtStylesProd = function() {  
+pipes.builtStylesProd = function() {
     return gulp.src(paths.styles)
         .pipe(plugins.sourcemaps.init())
             .pipe(plugins.minifyCss())
@@ -102,7 +102,7 @@ pipes.builtViews = function(){
         .pipe(gulp.dest(paths.distViews));
 };
 
-pipes.validatedIndex = function() {  
+pipes.validatedIndex = function() {
     return gulp.src(paths.index)
         .pipe(plugins.htmlhint())
         .pipe(plugins.htmlhint.reporter());
@@ -155,15 +155,15 @@ gulp.task('clean', function() {
     return deferred.promise;
 });
 
-pipes.builtAppProd = function() {  
+pipes.builtAppProd = function() {
     return pipes.builtIndexProd();
 };
 
-gulp.task('build-app-prod', pipes.builtAppProd);  
+gulp.task('build-app-prod', pipes.builtAppProd);
 
-gulp.task('clean-build-app-prod', ['clean'], pipes.builtAppProd); 
+gulp.task('clean-build-app-prod', ['clean'], pipes.builtAppProd);
 
-gulp.task('default', ['clean-build-app-prod']);  
+gulp.task('default', ['clean-build-app-prod']);
 
 gulp.task('build', ['clean-build-app-prod'], function(){
     plugins.cordova.plugins('add', cordovaPlugins)
