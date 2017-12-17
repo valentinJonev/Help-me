@@ -1,21 +1,21 @@
-<div class="register">
+<div class="register" ng-controller="registerController as register">
     <div class="wrapper">
         <div class="logo">
-            <img src="./assets/logo.png">
+            <img src="../misc/images/logo.png">
         </div>
 
         <h1>Регистрация</h1>
 
         <div class="container">
             <form>
-              <input type="text" placeholder="Трите имена"></input>
-              <input type="text" placeholder="Мейл"></input>
-              <input type="text" placeholder="Лична карта (номер)"></input>
-              <input type="text" placeholder="ЕГН"></input>
-              <input type="text" placeholder="Настоящ адрес"></input>
-              <input type="text" placeholder="Лекарства вземани редовно"></input>
-              <input type="text" placeholder="Алергии"></input>
-              <input type="text" placeholder="Ръст"></input>
+              <input type="text" ng-bind="register.scope.names" placeholder="Трите имена"></input>
+              <input type="text" ng-bind="register.scope.mail" placeholder="Мейл"></input>
+              <input type="text" ng-bind="register.scope.idCard" placeholder="Лична карта (номер)"></input>
+              <input type="text" ng-bind="register.scope.egn" placeholder="ЕГН"></input>
+              <input type="text" ng-bind="register.scope.address" placeholder="Настоящ адрес"></input>
+              <input type="text" ng-bind="register.scope.drugs" placeholder="Лекарства вземани редовно"></input>
+              <input type="text" ng-bind="register.scope.alergies" placeholder="Алергии"></input>
+              <input type="text" ng-bind="register.scope.height" placeholder="Ръст"></input>
               <div class="gender-wrapper">
                 <input type="radio" id="male" name="gender" checked>
                 <label for="male">Мъж</label>
@@ -24,7 +24,7 @@
                 <input type="radio" id="other" name="gender">
                 <label for="other">Друго</label>
               </div>
-              <select>
+              <select ng-bind="register.scope.bloodType">
                   <option value="" disabled selected style="color: rgba(0,0,0,128);">Кръвна група</option>
                   <option>А Положителна</option>
                   <option>A Отрицателна</option>
@@ -42,17 +42,17 @@
               </select>
               <div class="input-wrapper">
                 <label for="date">Дата на раждане:</label>
-                <input id="date" type="date"></input>
+                <input id="date" ng-bind="register.scope.birthDate" type="date"></input>
               </div>
               <div class="input-wrapper picture-wrapper">
                 <label style="margin-bottom: 15px;">Актуална снимка</label>
                 <div class="input-file-container">
-                  <input class="input-file" id="my-file" type="file">
+                  <input ng-bind="register.scope.photo" class="input-file" id="my-file" type="file">
                   <label tabindex="0" for="my-file" class="input-file-trigger">Select a file...</label>
                 </div>
                 <img id="preview" onload="preview_loaded()">
               </div>
-              <input type="submit" value="Регистрирай">
+              <input type="submit" ng-click="register.RegisterUser()" value="Регистрирай">
             </form>
         </div>
     </div>
